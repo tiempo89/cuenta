@@ -1,0 +1,110 @@
+name: calculos_table
+description: "Aplicación de hoja de cálculo implementada en Flutter."
+# La siguiente línea evita que el paquete se publique accidentalmente en
+# pub.dev usando `flutter pub publish`. Esto es preferible para paquetes privados.
+publish_to: "none" # Elimina esta línea si deseas publicar en pub.dev
+
+# Lo siguiente define la versión y el número de compilación de tu aplicación.
+# Un número de versión consiste en tres números separados por puntos, como 1.2.43
+# seguido opcionalmente por un número de compilación separado por un +.
+# Tanto la versión como el número de compilación pueden ser sobrescritos en flutter
+# build especificando --build-name y --build-number, respectivamente.
+# En Android, build-name se usa como versionName y build-number como versionCode.
+# Más información sobre versionamiento en Android en https://developer.android.com/studio/publish/versioning
+# En iOS, build-name se usa como CFBundleShortVersionString y build-number como CFBundleVersion.
+# Más información sobre versionamiento en iOS en
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# En Windows, build-name se usa como las partes mayor, menor y parche
+# de las versiones del producto y archivo, mientras que build-number se usa como el sufijo de compilación.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+# Las dependencias especifican otros paquetes que tu aplicación necesita para funcionar.
+# Para actualizar automáticamente tus dependencias a las últimas versiones
+# considera ejecutar `flutter pub upgrade --major-versions`. Alternativamente,
+# las dependencias pueden actualizarse manualmente cambiando los números de versión
+# a la última versión disponible en pub.dev. Para ver qué dependencias tienen nuevas
+# versiones disponibles, ejecuta `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Lo siguiente añade la fuente de Cupertino Icons a tu aplicación.
+  # Úsala con la clase CupertinoIcons para los iconos de estilo iOS.
+  cupertino_icons: ^1.0.8
+
+  # Paquete para guardar datos de forma persistente en el dispositivo.
+  shared_preferences: ^2.5.3
+
+  # Paquete para tomar capturas de pantalla de widgets específicos
+  screenshot: ^3.0.0
+
+  # Paquete para guardar imágenes y videos en la galería del dispositivo
+  image_gallery_saver:
+    path: local_plugins/image_gallery_saver
+
+  # Paquete para encontrar rutas de uso común en el sistema de archivos.
+  path_provider: ^2.1.5
+
+  # Paquete para manejar permisos en tiempo de ejecución
+  permission_handler: ^12.0.1
+
+  # Paquete para obtener información del dispositivo (como la versión de Android).
+  device_info_plus: ^10.1.0
+
+  # Paquete para la gestión de estado, recomendado por Flutter.
+  provider: ^6.1.2
+  flutter_lints: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # El paquete "flutter_lints" contiene un conjunto de reglas recomendadas
+  # para fomentar buenas prácticas de programación. El conjunto de reglas
+  # proporcionado por el paquete se activa en el archivo `analysis_options.yaml`
+  # ubicado en la raíz de tu paquete. Consulta ese archivo para obtener información
+  # sobre cómo desactivar reglas específicas y activar otras adicionales.
+
+# Para información sobre la parte genérica de Dart de este archivo, consulta
+# la siguiente página: https://dart.dev/tools/pub/pubspec
+
+# La siguiente sección es específica para paquetes Flutter.
+flutter:
+  # La siguiente línea asegura que la fuente Material Icons esté
+  # incluida en tu aplicación, para que puedas usar los iconos en
+  # la clase material Icons.
+  uses-material-design: true
+
+  # Para añadir recursos a tu aplicación, agrega una sección de assets, así:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+
+  # Un recurso de imagen puede referirse a una o más variantes específicas
+  # de resolución, ver https://flutter.dev/to/resolution-aware-images
+
+  # Para más detalles sobre cómo añadir recursos desde dependencias de paquetes,
+  # ver https://flutter.dev/to/asset-from-package
+
+  # Para añadir fuentes personalizadas a tu aplicación, agrega una sección
+  # de fuentes aquí, en esta sección "flutter". Cada entrada en esta lista
+  # debe tener una clave "family" con el nombre de la familia de la fuente,
+  # y una clave "fonts" con una lista que proporcione el recurso y otros
+  # descriptores para la fuente. Por ejemplo:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # Para más detalles sobre fuentes de dependencias de paquetes,
+  # ver https://flutter.dev/to/font-from-package

@@ -1,0 +1,4 @@
+rootProject.name = 'image_gallery_saver'
+
+include ':android'
+project(':android').projectDir = new File(settingsDir, './android')

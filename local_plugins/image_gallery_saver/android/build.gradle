@@ -1,0 +1,51 @@
+group 'com.example.imagegallerysaver'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    // Lógica robusta para leer la versión del SDK de compilación.
+    def localProperties = new Properties()
+    def localPropertiesFile = project.rootProject.file('local.properties')
+    if (localPropertiesFile.exists()) {
+        localPropertiesFile.withReader('UTF-8') { reader ->
+            localProperties.load(reader)
+        }
+    }
+
+    def flutterCompileSdkVersion = localProperties.getProperty('flutter.compileSdkVersion')
+    if (flutterCompileSdkVersion != null) {
+        compileSdkVersion flutterCompileSdkVersion.toInteger()
+    } else {
+        compileSdkVersion 35 // Valor por defecto actualizado para coincidir con el proyecto.
+    }
+
+    namespace "com.example.imagegallerysaver"
+
+    defaultConfig {
+        minSdkVersion 21
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}

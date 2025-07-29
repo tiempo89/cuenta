@@ -1,0 +1,7 @@
+# Archivos de configuración local de Android. ¡Nunca subir a Git!
+**/local.properties
+**/key.properties
+
+# Archivos generados por el sistema de compilación de Android
+**/android/.gradle
+**/android/app/build
