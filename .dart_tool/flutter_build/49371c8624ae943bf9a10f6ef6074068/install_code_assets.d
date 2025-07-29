@@ -1,1 +1,0 @@
- /home/tito89/Documentos/calculos_table/.dart_tool/flutter_build/49371c8624ae943bf9a10f6ef6074068/native_assets.json: 
