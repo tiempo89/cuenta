@@ -1,52 +1,36 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.buildlog/
-.history
-.svn/
-
-# IntelliJ
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# Flutter/Dart
+# Flutter/Dart related
 .dart_tool/
 .packages
-.pub-cache/
-build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.build/
 
-# Android
-# Ignore the whole android folder if you are not developing for Android.
-# Otherwise, ignore the following:
-# android/
-android/app/src/main/assets/flutter_assets/
-android/.gradle
-android/key.properties
-android/local.properties
+# Android build files
+android/.gradle/
+android/app/build/
+android/build/
 
-# iOS
-# Ignore the whole ios folder if you are not developing for iOS.
-# Otherwise, ignore the following:
-# ios/
-ios/Flutter/App.framework
-ios/Flutter/engine.xcconfig
-ios/Flutter/flutter_export_environment.sh
-ios/Flutter/Generated.xcconfig
+# iOS build files and Pods
 ios/Pods/
-ios/Runner/Assets.xcassets/AppIcon.appiconset/
-ios/Runner/Assets.xcassets/LaunchImage.launchimage/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Runner.xcworkspace/
 ios/Runner/GeneratedPluginRegistrant.*
 
-# macOS
-macos/Flutter/Generated.xcconfig
-macos/Flutter/ephemeral.xcconfig
-macos/Pods/
+# IntelliJ/Android Studio
+.idea/
+*.iml
 
-# Generated plugin registrant
-lib/generated_plugin_registrant.dart
+# VS Code settings
+.vscode/
+
+# Miscellaneous
+*.log
+*.tmp
+*.swp
+
+# Local files
+calculos_table.iml
+
+# Key properties (contains sensitive signing info)
+key.properties
